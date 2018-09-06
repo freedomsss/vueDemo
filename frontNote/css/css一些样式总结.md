@@ -69,15 +69,15 @@ absolute:绝对定位，设置为 absolute 的元素，如果它的 父容器设
         
 浮动详细介绍[浮动知识点](https://juejin.im/post/5a954add6fb9a06348538c0d)  
      
-###3. box-sizing是什么
+###3. `box-sizing`是什么
 设置CSS盒模型为标准模型或IE模型。标准模型的宽度只包括content，二IE模型包括border和padding
 box-sizing属性可以为三个值之一：
 
-* content-box，默认值，只计算内容的宽度，border和padding不计算入width之内
+* `content-box`，默认值，只计算内容的宽度，`border`和`padding`不计算入width之内
 
-* padding-box，padding计算入宽度内
+* `padding-box`，`padding`计算入宽度内
 
-* border-box，border和padding计算入宽度之内
+* `border-box`，`border`和`padding`计算入宽度之内
 
 ###4.px、em、rem的区别
 
@@ -100,3 +100,42 @@ link是XHTML标签，无兼容问题；@import是在CSS2.1提出的，低版本�
 
 link支持使用Javascript控制DOM去改变样式；而@import不支持。
 
+###6.css隐藏元素的几种方式
+
+* `display:none`
+ 
+  元素在页面上将彻底消失，元素本来占有的空间就会被其他元素占有，也就是说它会导致浏览器的重排和重绘。
+  
+  不会触发其点击事件
+  
+* `visibility:hidden`
+
+  和`display:none`的区别在于，<font color="#dd0000">元素在页面消失后，其占据的空间依旧会保留着</font>，所以它只会导致浏览器重绘而不会重排。
+  
+  无法触发其点击事件
+  
+  适用于那些元素隐藏后不希望页面布局会发生变化的场景
+
+* `opacity:0`  
+  
+  将元素的透明度设置为0后，在我们用户眼中，元素也是隐藏的，这算是一种隐藏元素的方法
+  
+  和`visibility:hidden`的一个共同点是元素隐藏后依旧占据着空间，但我们都知道，设置透明度为0后，元素只是隐身了，它依旧存在页面中。
+  
+  可以触发点击事件
+  
+* 其他方法
+  
+  设置元素的position与left，top，bottom，right等，将元素移出至屏幕外
+  
+  设置元素的position与z-index，将z-index设置成尽量小的负数
+  
+  设置height，width等盒模型属性为0
+
+###7.消除图片底部间隙的方法
+
+  图片块状化 - 无基线对齐：`img { display: block; }`
+  
+  图片底线对齐：`img { vertical-align: bottom; }`
+  
+  行高足够小 - 基线位置上移：`.box { line-height: 0; }`
