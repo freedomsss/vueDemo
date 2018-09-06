@@ -1,24 +1,33 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <!--<img alt="Vue logo" src="../assets/logo.png">-->
     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
-    <van-button type="danger">危险按钮</van-button>
+    <h3>html</h3>
+    <ul>
+    </ul>
+    <h3>css</h3>
+    <ul>
+      <li><router-link to="/menu"><van-tag type="success">光标下划线跟随的导航栏</van-tag></router-link></li>
+    </ul>
+    <h3>js</h3>
+    <ul>
+    </ul>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
-import { Button } from 'vant'
+import { Tag } from 'vant'
 
 export default {
   name: 'home',
   components: {
-    [Button.name]: Button,
+    [Tag.name]: Tag,
     HelloWorld
   },
   mounted () {
-    this.test()
+    // this.test()
   },
   methods: {
     test () {
@@ -36,3 +45,12 @@ export default {
   }
 }
 </script>
+
+<style lang="less">
+  ul li{
+    margin-top: 10px;
+  }
+  .van-tag{
+    font-size: 18px;
+  }
+</style>
