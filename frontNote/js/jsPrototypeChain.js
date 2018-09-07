@@ -13,3 +13,4 @@ const twoSum = function(nums, target) {
 const nums = [1,2,3,4];
 const target = 9;
 twoSum(nums, target);
+console.log(['Gin', 'Jeff'].join('_'))

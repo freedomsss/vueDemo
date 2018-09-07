@@ -8,9 +8,11 @@
     <h3>css</h3>
     <ul>
       <li><router-link to="/menu"><van-tag type="success">光标下划线跟随的导航栏</van-tag></router-link></li>
+      <li><router-link to="/canvasDemo"><van-tag type="success">边框</van-tag></router-link></li>
     </ul>
     <h3>js</h3>
     <ul>
+      <li><router-link to="/sort"><van-tag type="success">排序动画</van-tag></router-link></li>
     </ul>
   </div>
 </template>

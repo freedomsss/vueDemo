@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home.vue'
+const CanvasDemo = () => import('../views/CanvasDemo.vue')
+const Sort = () => import('../views/Sort.vue')
 
 Vue.use(Router)
 
@@ -25,6 +27,16 @@ export default new Router({
       path: '/menu',
       name: 'Menu',
       component: () => import('../views/Menu.vue')
+    },
+    {
+      path: '/canvasDemo',
+      name: 'CanvasDemo',
+      component: CanvasDemo
+    },
+    {
+      path: '/sort',
+      name: 'Sort',
+      component: Sort
     }
   ]
 })

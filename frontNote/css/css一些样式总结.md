@@ -3,7 +3,7 @@
 链接：https://juejin.im/post/5a954add6fb9a06348538c0d
 
 来源：掘金
-###1.position 几个属性的作用
+### 1.position 几个属性的作用
 
 position 的常见四个属性值: relative，absolute，fixed，static。一般都要配合"left"、"top"、"right" 以及 "bottom" 属性使用。
 
@@ -15,7 +15,7 @@ absolute:绝对定位，设置为 absolute 的元素，如果它的 父容器设
 * fixed:固定定位，位置被设置为 fixed 的元素，可定位于相对于浏览器窗口的指定坐标。不论窗口滚动与否，元素都会留在那个位置。它始终是以 body 为依据的。 注意设置 fixed 属性的元素在标准流中不占位置。
 
 ----
-###2.浮动与清除浮动
+### 2.浮动与清除浮动
 
 * 浮动相关知识
 
@@ -69,7 +69,7 @@ absolute:绝对定位，设置为 absolute 的元素，如果它的 父容器设
         
 浮动详细介绍[浮动知识点](https://juejin.im/post/5a954add6fb9a06348538c0d)  
      
-###3. `box-sizing`是什么
+### 3. `box-sizing`是什么
 设置CSS盒模型为标准模型或IE模型。标准模型的宽度只包括content，二IE模型包括border和padding
 box-sizing属性可以为三个值之一：
 
@@ -87,7 +87,7 @@ em 是相对长度单位，相对于当前对象内文本的字体尺寸。如�
 
 rem 是 CSS3 新增的一个相对单位(root em，根 em)，使用 rem 为元素设定字体大小时，仍然是相对大小， 但相对的只是 HTML 根元素。
 
-###5.css引入的方式有哪些？`link`和`@import`的区别
+### 5.css引入的方式有哪些？`link`和`@import`的区别
 
 有四种：内联(元素上的style属性)、内嵌(style标签)、外链(link)、导入(@import)
 link和@import的区别：
@@ -100,7 +100,7 @@ link是XHTML标签，无兼容问题；@import是在CSS2.1提出的，低版本�
 
 link支持使用Javascript控制DOM去改变样式；而@import不支持。
 
-###6.css隐藏元素的几种方式
+### 6.css隐藏元素的几种方式
 
 * `display:none`
  
@@ -132,10 +132,45 @@ link支持使用Javascript控制DOM去改变样式；而@import不支持。
   
   设置height，width等盒模型属性为0
 
-###7.消除图片底部间隙的方法
+### 7.消除图片底部间隙的方法
 
   图片块状化 - 无基线对齐：`img { display: block; }`
   
   图片底线对齐：`img { vertical-align: bottom; }`
   
   行高足够小 - 基线位置上移：`.box { line-height: 0; }`
+
+### 8.display:inline-block的间隙问题和解决办法
+
+  移除空格
+  
+  * 使用margin负值
+  
+  * 使用font-size:0
+  
+  * letter-spacing
+  
+  * word-spacing
+  
+### PNG,GIF,JPG的区别及如何选
+
+  * GIF
+  
+     * 8位像素，256色
+     * 无损压缩
+     * 支持简单动画
+     * 支持boolean透明
+     * 适合简单动画
+    
+  * JPEG
+  
+      * 颜色限于256
+      * 有损压缩
+      * 可控制压缩质量
+      * 不支持透明
+      * 适合照片
+      
+  * PNG
+      * 有PNG8和truecolor PNG
+      * PNG8类似GIF颜色上限为256，文件小，支持alpha透明度，无动画
+      * 适合图标、背景、按钮

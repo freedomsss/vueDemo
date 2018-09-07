@@ -1,2 +1,2 @@
-##javascript篇
+## javascript篇
 本篇很多内容来自阮一峰老师的博客
