@@ -38,9 +38,41 @@
   * `cookie`数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递
   * `sessionStorage`和`localStorage`不会自动把数据发给服务器，仅在本地保存
   * 存储大小
-    * `cookie`数据大小不能超过4k
-    * `sessionStorage`和`localStorag`e虽然也有存储大小的限制，但比`cookie`大得多，可以达到5M或更大
+    * `cookie`限制大小，约4k左右，不适合存储业务数据，尤其是数据量较大的值
+    * `sessionStorage`和`localStorage`虽然也有存储大小的限制，但比`cookie`大得多，可以达到5M或更大
   * 有效时间
     * `localStorage` 存储持久数据，浏览器关闭后数据不丢失除非主动删除数据
     * `sessionStorage` 数据在当前浏览器窗口关闭后自动删除
     * `cookie` 设置的`cookie`过期时间之前一直有效，即使窗口或浏览器关闭
+    
+    
+    1.Cookie适合存储一些session信息：
+    
+    cookie限制大小，约4k左右，不适合存储业务数据，尤其是数据量较大的值
+    存在有效期，到期自动销毁
+    cookie会每次随http请求一起发送，浪费宽
+    cookie设置了domain可以在子域共享跨域
+    可以使用爬虫抓取
+    
+    
+    2.localstroage适合存储应用共享的地址信息等：
+    
+    存储数据量大，5M或者更大
+    有效期为永久
+    不会随http请求一起发送
+    不能跨域，但是可以使用postMessage和iframe消除这个影响,例如：cross-storage
+    在浏览器的隐私模式下不能读取
+    不能被爬虫读取
+    
+    
+    3.sessionstroage适合存储浏览状态等：
+    
+    存储数据量大，5M或者更大
+    有效期为到浏览器关闭
+    不会随http请求一起发送
+    不能被爬虫读取
+    
+    作者：梦想攻城狮
+    链接：https://juejin.im/post/5bb1cc2af265da0ae5052496
+    来源：掘金
+    著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
