@@ -5,6 +5,10 @@ import store from './store'
 import './registerServiceWorker'
 import common from './utils/common'
 import { Toast } from 'vant'
+// import Vant from 'vant'
+// import 'vant/lib/vant-css/index.css'
+
+// Vue.use(Vant)
 
 Vue.use(common)
 Vue.use(Toast)

@@ -15,6 +15,9 @@
       <li><router-link to="/sort"><van-tag type="success">排序动画</van-tag></router-link></li>
       <li><router-link to="/slider"><van-tag type="success">轮播切换效果</van-tag></router-link></li>
     </ul>
+    <ul>
+      <li><router-link to="/easyTestAboutVue"><van-tag type="success">vue小列子</van-tag></router-link></li>
+    </ul>
   </div>
 </template>
 
@@ -31,11 +34,11 @@ export default {
   },
   mounted: function () {
     // this.test()
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(onSuccess, onError)
-    } else {
-      alert('您的浏览器不支持使用HTML 5来获取地理位置服务')
-    }
+    // if (navigator.geolocation) {
+    //   navigator.geolocation.getCurrentPosition(onSuccess, onError)
+    // } else {
+    //   alert('您的浏览器不支持使用HTML 5来获取地理位置服务')
+    // }
 
     // 定位数据获取成功响应
     function onSuccess (position) {

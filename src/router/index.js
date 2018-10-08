@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 const CanvasDemo = () => import('../views/CanvasDemo.vue')
 const Sort = () => import('../views/Sort.vue')
 const Slider = () => import('../views/Slider.vue')
+const EasyTestAboutVue = () => import('../views/EasyTestAboutVue.vue')
 
 Vue.use(Router)
 
@@ -43,6 +44,11 @@ export default new Router({
       path: '/slider',
       name: 'Slider',
       component: Slider
+    },
+    {
+      path: '/easyTestAboutVue',
+      name: 'EasyTestAboutVue',
+      component: EasyTestAboutVue
     }
   ]
 })
