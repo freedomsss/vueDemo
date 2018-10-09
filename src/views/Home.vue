@@ -16,7 +16,7 @@
       <li><router-link to="/slider"><van-tag type="success">轮播切换效果</van-tag></router-link></li>
     </ul>
     <ul>
-      <li><router-link to="/easyTestAboutVue"><van-tag type="success">vue小列子</van-tag></router-link></li>
+      <li><router-link to="/easyTestAboutVue"><van-tag type="success">跟着官网学习vue小列子</van-tag></router-link></li>
     </ul>
   </div>
 </template>

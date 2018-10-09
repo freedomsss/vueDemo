@@ -1,7 +1,7 @@
 <template>
   <div>
     <div :title="title" @click="sayHello">{{message}}</div>
-    <TodoItem :items="manyMessage"></TodoItem>
+    <TodoItem :items="manyMessage" v-on:showHidden="showHidden"></TodoItem>
     <button v-bind:disabled="isButtonDisabled">Button</button>
     <div>计算属性的运用</div>
     <div>{{reversedMessage}}</div>
@@ -10,16 +10,24 @@
     </div>
     <div>样式：class与style绑定</div>
     <div :class="{active: isActive, danger: isDanger}">hhhh</div>
+    <div v-show="isShow">被控制的显示与隐藏的文字</div>
+    <custom-input v-model="searchText" :value="searchText" v-on:input="searchText = $event"></custom-input>
+    <p>{{searchText}}</p>
+    <alert-box>something wrong... </alert-box>
   </div>
 </template>
 
 <script>
 import { Toast } from 'vant'
 import TodoItem from '../components/TodoItem'
+import CustomInput from '../components/CustomInput'
+import AlertBox from '../components/AlertBox'
 
 export default {
   components: {
-    TodoItem
+    TodoItem,
+    AlertBox,
+    CustomInput
   },
   data () {
     return {
@@ -30,7 +38,9 @@ export default {
       firstName: 'li',
       lastName: 'hao',
       isActive: false,
-      isDanger: true
+      isShow: true,
+      isDanger: true,
+      searchText: ''
     }
   },
   computed: {
@@ -58,6 +68,10 @@ export default {
   methods: {
     sayHello () {
       Toast.success('hello world!')
+    },
+    showHidden (data) {
+      this.isShow = !this.isShow
+      console.log(data)
     }
   }
 }
