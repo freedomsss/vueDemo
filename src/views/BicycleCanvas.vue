@@ -63,6 +63,7 @@
         this.ele.style.backgroundColor = this.canvasBg;
         document.body.appendChild(this.ele);
         this.ctx = this.ele.getContext('2d');
+        // getContext('2d')获取canvas的上下文环境，内建的的html5对象，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法
         this.run();
         return this.ctx;
       },
@@ -96,7 +97,9 @@
         this.ctx.moveTo(horizonX, horizonY);
         this.ctx.lineTo(this.canvasW, horizonY); // 添加一个新点，然后在画布中创建从该点到最后指定点的线条
         this.ctx.closePath(); // 创建从当前点回到起始点的路径
-        this.ctx.stroke(); // 绘制已定义的路径
+        this.ctx.stroke();
+        // 绘制已定义的路径，stroke() 方法会实际地绘制出通过 moveTo() 和 lineTo() 方法定义的路径。
+        // 默认颜色是黑色。在进行图形绘制前，要设置好绘图的样式
 
         Array.from({length:5}).map((k,v)=>{
           let dotProportion = (this.canvasW*0.49)*v-this.oneCent;
