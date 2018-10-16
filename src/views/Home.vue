@@ -17,6 +17,7 @@
     </ul>
     <ul>
       <li><router-link to="/easyTestAboutVue"><van-tag type="success">跟着官网学习vue小列子</van-tag></router-link></li>
+      <li><router-link to="/bicycleCanvas"><van-tag type="success">利用canvas绘制自行车</van-tag></router-link></li>
     </ul>
   </div>
 </template>
