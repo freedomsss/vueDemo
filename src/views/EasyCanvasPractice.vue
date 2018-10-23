@@ -88,7 +88,7 @@ export default {
     context.closePath()
     context.fill()
     // 绘制线段
-    var n = 0
+    // var n = 0
     var dx = 100
     var dy = 450
     var s = 100
@@ -99,8 +99,8 @@ export default {
     var y = Math.cos(0)
     var dig = Math.PI / 15 * 7
     for (var i = 0; i < 30; i++) {
-      var x = Math.sin(i * dig)
-      var y = Math.cos(i * dig)
+      x = Math.sin(i * dig)
+      y = Math.cos(i * dig)
       context.lineTo(dx + x * s, dy + y * s)
       // console.log( x, y)
     }

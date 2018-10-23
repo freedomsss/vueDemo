@@ -174,3 +174,5 @@ link支持使用Javascript控制DOM去改变样式；而@import不支持。
       * 有PNG8和truecolor PNG
       * PNG8类似GIF颜色上限为256，文件小，支持alpha透明度，无动画
       * 适合图标、背景、按钮
+
+  

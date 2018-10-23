@@ -7,6 +7,7 @@ const Slider = () => import('../views/Slider.vue')
 const EasyTestAboutVue = () => import('../views/EasyTestAboutVue.vue')
 const BicycleCanvas = () => import('../views/BicycleCanvas.vue')
 const EasyCanvasPractice = () => import('../views/EasyCanvasPractice.vue')
+const CanvasPratice = () => import('../views/CanvasPratice.vue')
 
 Vue.use(Router)
 
@@ -61,6 +62,11 @@ export default new Router({
       path: '/easyCanvasPractice',
       name: 'EasyCanvasPractice',
       component: EasyCanvasPractice
+    },
+    {
+      path: '/canvasPratice',
+      name: 'CanvasPratice',
+      component: CanvasPratice
     }
   ]
 })
