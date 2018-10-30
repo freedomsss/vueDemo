@@ -14,8 +14,22 @@
  * var message = '你好, ' + name + ', 你今年' + age + '岁了!'; // 加号
  *  `你好, ${name}, 你今年${age}岁了!`; // 模板字符串
  *  操作字符串
- *  
+ *  var s = 'Hello, world!';
+    s.length; // 13
+    s[0]; // 'H' 可通过下标索引但不可赋值，不会报错，但是也没有任何效果
  */
+// 字符串常见方法
+var s = 'Hello, world!'
+console.log(s.toUpperCase()) // toUpperCase()把一个字符串全部变为大写
+console.log(s.toLocaleLowerCase()) // toLowerCase()把一个字符串全部变为小写
+console.log(s.indexOf('world')) // 返回 7 检索指定字符串的位置
+console.log(s.indexOf('World')) // 返回 -1 未检索到的字符串则返回-1
+// s.substring(0, 7)方法参数理解：小于0为零，如果有两位参数，按参数大小从小到大取值，如果以为参数，则该参数为起始位直到最后
+console.log(s.substring(0, 7)) // substring()返回指定索引区间的子串
+console.log(s.substring(7)) // world!
+console.log(s.substring(-1)) // Hello, world!
+console.log(s.substring(0)) // Hello, world!
+console.log('substring', s.substring(7, 0)) // Hello, world!
 /**
  * 布尔值
  * true false
@@ -39,6 +53,12 @@
  * new Array(1, 2, 3); // 创建了数组[1, 2, 3]
  * [1, 2, 3.14, 'Hello', null, true];
  */
+var arr = [1, 2, 3]
+console.log(arr.length) // 3
+arr.length = 6
+console.log(arr) // arr变为[1, 2, 3, undefined, undefined, undefined]
+arr.length = 2
+console.log(arr) // arr变为[1, 2]
 /**
  * 对象
  * JavaScript的对象是一组由键-值组成的无序集合,对象的键都是字符串类型，值可以是任意数据类型。每个键又称为对象的属性
