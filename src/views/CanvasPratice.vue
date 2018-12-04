@@ -5,6 +5,9 @@
       <!--<canvas id="canvas2"></canvas>-->
     </div>
     <div class="filter mask"></div>
+    <div class="box" @click="fun1">
+      <canvas id="canvas" @click="fun2"></canvas>
+    </div>
   </div>
 </template>
 <script>
@@ -51,6 +54,15 @@ export default {
   },
   mounted () {
     // this.Star(100, 100)
+    const canvas = document.getElementById('canvas')
+    canvas.width = 100
+    canvas.height = 100
+    const context = canvas.getContext('2d')
+    context.beginPath()
+    context.fillStyle = 'rgba(0,255,0,0.25)'
+    context.arc(50, 50, 50, 0, Math.PI * 2, true)
+    context.closePath()
+    context.fill()
   },
   methods: {
     /* 设置单个 star
@@ -74,6 +86,13 @@ export default {
       // if (useCache) {
       //   // this.cache()
       // }
+    },
+    fun1(e) {
+      alert(1)
+    },
+    fun2(e) {
+      alert(2);
+      e.stopPropagation(); 
     }
   }
 }
@@ -142,4 +161,15 @@ export default {
       background-position: 100% 0;
     }
   }
+  .box{
+    width: 300px;
+    height: 300px;
+    background: red
+  }
+  .content{
+    width: 100px;
+    height: 100px;
+    background: green
+  }
+
 </style>
